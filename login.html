@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="emailcheck.js"></script>
+    <title>Sign IN</title>
+</head>
+
+<body>
+    <div class="containar_login">
+        <h2>Sign In</h2>
+        <div class="login">
+<form action="login1.php" method="POST">
+
+                <span id="invalid"></span>
+                <input name="emailId" type="email" placeholder="Email Id" required>
+                
+                <input name="Password" type="password" placeholder="Password" required>
+
+        </div>
+
+        <div class="term">
+            <input type="checkbox" name="term" class="cbox">
+            <p> Cheak the cheak box to accepct the term and condition your password has been seved </p>
+
+        </div>
+        <div class="btn_login">
+            <input  onclick="validEmail()" id="input" type="submit" value="LogIn">
+        </div>
+
+        <p id="go_singup"> If you are not Create a Account <a href="index.html">SignUP</a> </p>
+ </form>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
