@@ -3,8 +3,7 @@
     $secondName=$_POST['last_name'];
     $emailid=$_POST['email_id'];
     $userPassword=$_POST['Password'];
-    // $email=$_GET['Email'];
-    // echo"YOur email is",$email;
+
 
 
     $database= 'localhost';
@@ -62,27 +61,6 @@
 
 
 
-
-
-
-
-
-
-
- 
-//     if($con){
-//     echo "Database Success";
-
-//     }
-//  
-//     $i=mysqli_query($con,$q);
-//     if($i)
-//     {
-//         echo "execute";
-//     }
-//     else{
-//         echo "not exe";
-//     }
 
 
 
