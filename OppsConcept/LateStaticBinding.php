@@ -28,7 +28,7 @@
     $obj1=new roll();
     $obj1->select();
     $obj1->insert();
-    $obj2=new student();
+    $obj2= new student();
     $obj2->select();
     $obj2->insert();
 

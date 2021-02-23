@@ -1,6 +1,15 @@
 <?php
 
-class student{
+trait t1{
+    public function show()
+      {
+        echo "demo trait class";
+      }
+
+}
+
+
+class S{
     private $studentId;
     private $EnrolmentNO;
     private $fullName;
@@ -29,15 +38,25 @@ class student{
 };
 
 
-class putStudentData{
+class putStudentData extends S
+{
+    use t1;
+    private $ob1;
 
-    $St
+    function __construct()
+    {
+        $this->ob1= new S(22,333,"Aadarsh Singh","aadarshsingh121@gmail.com");
+        echo "<pre>";
+        
+        $this->ob1->showData();
+    }
+
+};
 
 
-
-
-}
-
+$obj1 = new putStudentData();
+$obj1->showData();
+$obj1->show();
 
 
 

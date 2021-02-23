@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assist/headercss.css">
+    
+    <script src="https://kit.fontawesome.com/a39101c90e.js" crossorigin="anonymous"></script>
+    <title>Header</title>
+
+
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <h1 class="logo-txt">Code<span>vs</span>Program</h1>
+        </div>
+        <i class="fa fa-bars" class="menu-toggle" id="icon"></i>
+        <div id="nav-div">
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contect</a></li>
+                <li><a href="#">Service</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+
+
+
+
+    <script>
+
+        var menu = document.getElementById('icon');
+        var Nav = document.getElementById('nav-div');
+        Nav.style.right = "-250px";
+        menu.onclick = function () {
+            if (Nav.style.right == "-250px") {
+                Nav.style.right = "0px";
+            }
+            else {
+                Nav.style.right = "-250px";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

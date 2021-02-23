@@ -1,0 +1,251 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+}
+header{
+    background-color: rgb(5, 5, 58);
+    height: 60px;
+}
+header * {
+    color: rgb(255, 255, 255);
+}
+header .logo{
+    
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+   padding-bottom: 10px;
+   
+}
+
+ header .logo h1{
+    margin: 0;
+    padding: 0;
+    margin: 1px 9px;
+   
+}
+ span{
+    color: rgb(250, 7, 7);
+}
+#nav-div{
+    margin: 0;
+    padding: 0;
+}
+header ul{
+    /* background-color: rgb(13, 7, 14); */
+    height: inherit;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+header ul li{
+    float: left;
+}
+header ul li a{
+   display: block;
+   padding: 7px 15px;
+   margin-top: 5px;
+   font-size: 1.1em;
+   text-decoration: none;
+   height: inherit;
+
+}
+header ul li a:hover{
+  background-color: rgb(56, 15, 104);
+  transition: 0.5s;
+  border-radius: 7px ;
+}
+header .menu-toggle{
+    /* size: 10px; */
+    display: none;
+}
+
+
+
+
+/* Footer Bar All pages */
+
+
+
+#footer-bar{
+    /* position: absolute; */
+      margin-right: 15px;
+      width: 100%;
+      height: 250px;
+      float: left;
+      background-color: rgba(8, 6, 6, 0.849);
+    
+    
+    }
+    
+    .footer-content{
+        margin: 0 5px;
+        margin-top: 20px;
+        
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;  
+    }
+    .footer-content .about-us{
+       flex-basis: 31%;
+    }
+    .footer-content .about-us p{
+        margin-top: 31px;
+    }
+    .footer-content .pages{
+     flex-basis: 31%;
+    }
+    .footer-content .pages ul {
+        
+     list-style: none;
+     margin-top: 30px;
+    }
+    .footer-content .pages ul a {
+        
+        text-decoration: none;
+        color: white;
+    }
+    .footer-content .pages ul a:hover li{
+       color: black;
+       padding-left: 10px;
+       transition: all .3s;
+    }
+    .footer-content .pages ul li {
+        transition: all .5s;
+        padding-bottom: 10px;
+        text-decoration-color: white;
+        font-size: large;
+    
+    }
+    .footer-content .contect{
+      flex-basis: 30%;
+    }
+    .footer-content .contect a{
+      margin-top: 25px;
+      text-decoration: none; 
+      color: white;
+      display: block;
+     
+    }
+    .footer-content .contect a:hover{
+     color: rgb(0, 0, 0);
+     
+    }
+    .footer-content .contect h5{
+        
+      margin-top: 30px;
+      font-weight: 500;
+    }
+    .content .links{
+        padding: 20px 0;
+    }
+    .contect .links a{
+        display: contents;
+    }
+    .contect .links a i{
+        font-size: x-large;
+        padding-top: 12px;
+       padding-left: 10px;
+       transition: .5s;
+    }
+    .contect .links a:hover i {
+     color: rgb(0, 0, 0);
+     padding-top: 15px;
+     transition: .3s;
+    }
+    .copyright{
+        text-align: center;
+        height: 30px;
+        width: 100%;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.842);
+        color: white;
+    }
+    .copyright a{
+        text-decoration: none;
+        color: white;
+    }
+    .copyright a:hover{
+        color: rgb(0, 0, 0);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 750px){
+    
+    header{
+        position: relative;
+    }
+    #nav-div{
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        right: -250px;
+        top: 0px;
+        transition: .5s;
+        z-index: 100;
+             margin: 0;
+            padding: 0;
+    }
+  
+
+    header ul{
+        /* width: 100%; */
+        background-color: rgb(20, 20, 102); 
+    }
+    
+    header ul li{
+        width: 100%;
+        background-color: inherit;
+    }
+    header ul li a:hover{
+        background-color: blueviolet;
+    }
+    header ul li ul{
+        position: static;
+        display: block;
+        width: 100%;
+    }
+    .menu-toggle{
+        display: block;
+        position: absolute;
+        right: 12px;
+        top: 14px;
+        z-index: 10;
+       
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

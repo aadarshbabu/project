@@ -1,0 +1,327 @@
+
+/* Header sction css */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.headraper header{
+    background-color: rgb(53, 53, 202);
+    height: 60px;
+}
+.headraper header * {
+    color: rgb(250, 227, 227);
+}
+.headraper header .logo{
+    
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+   
+}
+.headraper header .logo h1{
+  
+    margin: 0;
+    padding: 0;
+    margin: 9px;
+   
+}
+ .headraperspan{
+    color: rgb(250, 7, 7);
+}
+.headraper .nav-div{
+    margin: 0;
+    padding: 0;
+}
+.headraper header ul{
+    height: inherit;
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.headraper header ul li{
+    float: left;
+}
+.headraper header ul li a{
+   display: block;
+   padding: 21px;
+   font-size: 1.1em;
+   text-decoration: none;
+   height: inherit;
+   
+
+}
+.headraper header ul li a:hover{
+  background-color: rgb(56, 15, 104);
+  transition: 0.5s;
+  border-radius: 7px ;
+}
+
+/* Header sction css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Design  admin panel */
+
+.container{
+    display: flex;
+    margin: 15px 7px;
+}
+
+.sidebar-menu{
+flex: 2;
+height: 100vh;
+background-color: rgb(13, 46, 13);
+padding: 20px 0;
+border: 2px red solid;
+}
+
+.container .mainsection{
+    flex: 8;
+    background-color: rgb(153, 149, 149);
+    width: 100%;
+    border: 2px red solid;
+}
+
+.adminbtn{
+    width: 100%;
+    margin: 30px 0;
+    padding: 8px;
+    display: block;
+    background-color: rgb(8, 54, 8);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.sidebar-menu a:hover{
+background-color: rgb(20, 14, 6);
+}
+
+.noofpost,.noofpage{
+    height: 90px;
+    width: 270px;
+    display: block;
+    background-color: blue;
+    margin-top: 7%;
+    margin-left: 5%;
+    color: white;
+}
+.noofpost p{
+    padding-top: 10px;
+   text-align: center;
+   font-weight: 700;
+   font-size: large;
+}
+
+
+
+
+/* Artical input section */
+/* .mainsection{
+    padding-left: 30px;
+    padding-bottom: 40px;
+    padding-right: 30px;
+    border: 2px red solid;
+    flex:8
+} */
+
+.mainsection h4 textarea{
+    width: 100%;
+    display: block;
+    margin: 15px 10px;
+    margin-left: 30px;
+    padding: 8px 0;
+}
+.category
+{
+    margin-top: 20px;
+}
+.category,select{
+    width: 300px;
+    padding: 10px;
+    border: none;
+}
+.category,option{
+   font-size: larger;
+  
+}
+/* .trafic{
+margin-top: 30px;
+} */
+
+.post-data{
+    margin-top: 50px;
+}
+table{
+    
+    width: 90%;
+    text-align: left;
+    /* padding: 10px 8px; */
+}
+
+table,tr,th,td{
+     border-collapse: collapse;
+     /* text-align: left; */
+    padding: 6px 5px;
+    /* margin: 4% 10%; */
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/* Manage Image  */
+
+
+/* .mainsection #submit-btn{
+padding: 15px 15px;
+width: 10%;
+background-color: green;
+border: none;
+color: white;
+} */
+
+
+
+
+
+
+/* SinghUP */
+
+
+.singup{
+    background-color: rgb(36, 9, 9);
+    width: 50%; 
+    height: inherit; 
+}
+
+.singup,input{
+
+width: 40%;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Login form admin section  */
+
+body{
+    background-color: rgb(22, 16, 16);
+}
+.container-login{
+    margin: 100px 100px;
+}
+.logo{
+   padding-left: 100px;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.login-form{
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+p{
+    margin-bottom: 20px;
+    width: 50%;
+    height: 20px;
+    color: red;
+}
+
+
+
+.login-form,input{
+    width: 60%;
+    padding: 0px 5px;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.container .input-element {
+    padding-top: 1%;
+    height: 500px;
+    width: 400px;
+    margin-left: 15%;
+    background-color: rgb(42, 39, 39);
+    text-align: center;
+    border-radius: 7px;
+    
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+.login-form h3{
+
+    font-size: large;
+}
+
+.form-btn{
+    margin: 10px 5%;
+}
+.submit-btn{
+    margin: 0 1%;
+    padding: 5px 5px;
+    border-radius: 7px;
+   background-color: rgb(21, 167, 21);
+    border: 1px solid rgb(0, 0, 0);
+   font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
+.reset-btn{
+    margin: 0 1%;
+    padding: 10px 20px;
+    border-radius: 7px;
+   background-color: rgb(187, 19, 19);
+    border: 1px solid rgb(0, 0, 0);
+   font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+
+}
+
