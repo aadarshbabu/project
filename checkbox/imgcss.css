@@ -1,0 +1,76 @@
+
+.msg {
+    width: 100vh;
+    height: 10vh;
+    border: 1px solid black;
+}
+
+.imgupload {
+    background-color: blueviolet;
+    margin: 20px auto;
+    width: 100vh;
+    height: 20vh;
+}
+
+#btn-submit {
+    display: block;
+    padding: 7px 10px;
+    margin: 10px auto;
+    background-color: green;
+    border: none;
+    outline: none;
+    color: white;
+    text-decoration: none;
+    font-size: medium;
+}
+
+#btnupload {
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+}
+
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+label img {
+    width: 20%;
+    cursor: pointer;
+    margin: auto auto;
+    border: 2px solid black;
+
+}
+
+[type=radio]:checked+label img {
+    outline: 2px solid red;
+    border: 0px;
+}
+
+.imagediv {
+    margin: auto;
+    box-sizing: border-box;
+    padding: 50px 0 0;
+    width: 80%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: max-content;
+
+}
+
+.column {
+    width: 31.3%;
+    padding-bottom: 15px;
+}
+
+.column label img {
+    width: 90%;
+}

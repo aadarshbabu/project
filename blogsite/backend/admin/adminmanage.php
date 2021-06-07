@@ -31,8 +31,8 @@ include "./conn/db.php";
 
 
 
-<div class="mainsection">
-        <div class="login-form">
+    <div class="mainsection">
+        <div class="registeration">
             <form action="" method="POST">
                 <label for="">Name</label>
                 <input type="text" name="username" placeholder="Enter Your name">
@@ -42,12 +42,13 @@ include "./conn/db.php";
                 <input class="pass" type="password" name="userpass" placeholder="Enter Password">
                 <label for="">Conform password</label>
                 <input class="cpass" type="password" name="usercpass" placeholder="Enter Conform Passrord">
+
                 <input type="submit" value="SingUp" class="submit-btn" name="Submit">
             </form>
         </div>
     </div>
 
-</div>
+    </div>
 
 </body>
 

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeVsProgram</title>
- 
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="singalpage.css">
     <script src="../../assist/header.js"></script>
     <link rel="stylesheet" href="../../assist/headercss.css">
     <script src="https://kit.fontawesome.com/a39101c90e.js" crossorigin="anonymous"></script>
-</head>
-<body>
+ </head>
 
-<?php
-include "../../assist/header.php";
-?>
- 
+ <body>
+
+    <?php
+    include "../../assist/header.php";
+    ?>
+
     <section id="containar">
         <div class="containar">
             <div class="headingtext">
@@ -39,27 +40,26 @@ include "../../assist/header.php";
             <p>We Provide Lot of Cources For better Learning</p>
 
         </div>
-        <div class="containar-cource">
-            <div class="feature-row">
-                <div class="feature-col">
-                    <img src="../../assist/images/c.png" alt=" c language">
-                    <h4>C language</h4>
-                    <p>Learn C language is very easy way You learn c langauag east </p>
-                    <button class="common-btn">Learn Now</button>
-                </div>
-                <div class="feature-col">
-                    <img src="../../assist/images/cpp.jpg" alt="">
-                    <h4>C Plus Plus</h4>
-                    <p>Learn c plus plus language is very easy way Lorem, lorem ipsum dolor. </p>
-                    <button class="common-btn">Learn Now</button>
-                </div>
-                <div class="feature-col">
-                    <img src="../../assist/images/java.jpg" alt="">
-                    <h4>Java</h4>
-                    <p>Learn java language Lorem ipsum dolor sit amet consectetur.is very easy way </p>
-                    <button class="common-btn">Learn Now</button>
-                </div>
 
+        <div class="containar-cource">
+
+            <div class="feature-row">
+
+            <?php
+            require_once "../../backend/admin/conn/db.php";
+            $data = $postdata->fetchblog();
+
+            foreach ($data as $value) {
+            ?>
+                    <div class="feature-col">
+                        <img src="../../assist/images/c.png" alt=" c language">
+                        <h4><?php echo $value['title']; ?></h4>
+                        <p> <?php echo $value['descr']; ?></p>
+                      <a href="<?php echo $value['slug']; ?>"><button class="common-btn">Learn Now</button> </a> 
+                    </div>
+                <?php
+            }
+                ?>
             </div>
         </div>
     </section>
@@ -125,11 +125,11 @@ include "../../assist/header.php";
     </section>
 
 
- <?php
-include "../../assist/footer.php"
-?>
+    <?php
+    include "../../assist/footer.php"
+    ?>
 
 
-</body>
+ </body>
 
-</html>
+ </html>

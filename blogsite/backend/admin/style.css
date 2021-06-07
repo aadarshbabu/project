@@ -60,51 +60,37 @@
   border-radius: 7px ;
 }
 
-/* Header sction css */
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Design  admin panel */
+/* Design  admin panel Dashboard */
 
 .container{
     display: flex;
-    margin: 15px 7px;
+    margin: 10px 7px;
 }
 
 .sidebar-menu{
 flex: 2;
-height: 100vh;
+margin: 7px auto;
+width: 60%;
 background-color: rgb(13, 46, 13);
-padding: 20px 0;
-border: 2px red solid;
+box-shadow: 0 0 15px 0 #000;
+padding: 20px auto;
 }
 
 .container .mainsection{
     flex: 8;
-    background-color: rgb(153, 149, 149);
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    border: 2px red solid;
 }
 
+/* sidebar button */
 .adminbtn{
-    width: 100%;
-    margin: 30px 0;
+    width: 70%;
+    margin: 2rem auto;
     padding: 8px;
     display: block;
     background-color: rgb(8, 54, 8);
@@ -114,12 +100,12 @@ border: 2px red solid;
     color: white;
     font-size: large;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     
 }
 
 .sidebar-menu a:hover{
-background-color: rgb(20, 14, 6);
+background-color: rgba(63, 53, 40, 0.863);
 }
 
 .noofpost,.noofpage{
@@ -138,57 +124,219 @@ background-color: rgb(20, 14, 6);
    font-size: large;
 }
 
+/* manage artical */
 
 
+.post-container{
+    
+    padding: 20px 30px;
+    margin: 30px auto;
+    width: 90%;
+    background-color: rgb(251, 251, 224);
+    box-shadow: 0 0 10px 0 #000;
+}
 
-/* Artical input section */
-/* .mainsection{
-    padding-left: 30px;
-    padding-bottom: 40px;
-    padding-right: 30px;
-    border: 2px red solid;
-    flex:8
-} */
-
-.mainsection h4 textarea{
+.mainsection .post-container #editor{
     width: 100%;
     display: block;
-    margin: 15px 10px;
-    margin-left: 30px;
-    padding: 8px 0;
+    margin: 15px auto;
+    padding: 8px auto;
 }
-.category
+
+.mainsection .post-container .category
 {
-    margin-top: 20px;
+    margin: 10px 2px;
 }
-.category,select{
-    width: 300px;
-    padding: 10px;
-    border: none;
+.mainsection .post-container label{
+    margin: 10px 2px;
 }
-.category,option{
+.mainsection .post-container .category select{
+    width: 180px;
+    padding: 10px; 
+}
+.mainsection .post-container .category option{
    font-size: larger;
+}
+
+.mainsection .post-container label{
+    display: block;
+    font-size: large;
+}
+
+.mainsection .post-container input{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 13px;
+    font-weight: 500;
+    font-size: large;
+
+}
+.mainsection .post-container textarea{
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px 13px;
+    font-weight: 400;
+    font-size: large;
+}
+
+#author input{
+    width: 20%;
+    margin: 5px auto;
+    padding: 7px 8px;
+    font-weight: 500;
+    font-size: small;
+
+}
+
+.btn{
+    width:100%
+}
+.mainsection .post-container .btn input{
+    width: 15%;
+    margin: 10px auto;
+    padding: 7px 8px;
+    display: block;
+    background-color: green;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.mainsection .post-container .btn-save input{
+    background-color: deeppink;
+    width: 15%;
+    margin: 10px auto;
+    padding: 7px 8px;
+    display: block;
+    color: white;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.mainsection .post-container .imgblog{
+    
+    display: none;
+    margin: 10% 30% auto;
+    position: fixed;
+    width: 60%;
+    background-color: rgb(255, 235, 235);
+    height: 70%;
+    left: 0;
+    z-index: 20;
+    top: 0;
+    overflow: auto;
+   
   
 }
-/* .trafic{
-margin-top: 30px;
-} */
 
-.post-data{
-    margin-top: 50px;
+.mainsection .post-container .imgblog .close{
+    color: rgb(0, 0, 0);
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 10px 10px;
 }
-table{
-    
+
+.mainsection .post-container .insertimage #image{
+  color: black;
+}
+.mainsection .post-container .imgblog .close:hover{
+   cursor: pointer;
+   
+}
+
+
+
+
+
+/* Manage Post */
+
+
+.mainsection .managepost{
+    padding: 20px 30px;
+    margin: 30px auto;
     width: 90%;
-    text-align: left;
-    /* padding: 10px 8px; */
+    background-color: rgb(255, 241, 241);
+    box-shadow: 0 0 10px 0 #000;
+   
+}
+.managepost label{
+    padding: 10px 20px;
+    font-size: x-large;
+    font-weight: 500;
 }
 
-table,tr,th,td{
-     border-collapse: collapse;
-     /* text-align: left; */
-    padding: 6px 5px;
-    /* margin: 4% 10%; */
+.mainsection .managepost table{
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: large;    
+    font-weight: 400;
+}
+
+.mainsection .managepost th, td{
+    padding: 7px;
+     text-align: left;
+    border: 1px solid black;
+}
+
+
+
+
+/*  Category Page */
+
+.add-catugory{
+    padding: 20px 30px;
+    margin: 30px auto;
+    width: 300px;
+    background-color: #ffb;
+    box-shadow: 0 0 10px 0 #000;
+
+}
+
+.add-catugory label{
+    font-size: large;
+    padding: 7px 5px;
+    color: rgb(0, 0, 0);
+    display: block;
+    font-style: italic;
+}
+.add-catugory input {
+    outline: none;
+    width: 90%;
+   padding: 8px 7px;
+    display: block;
+}
+.add-catugory button, .edit-category table .btn-del{
+    border: none;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    margin: 10px auto;
+    padding: 8px 17px;
+    display: block;
+}
+
+.edit-category table .btn {
+    margin: 0px auto;
+    padding: 8px 17px;
+    background-color: red;
+}
+
+
+.edit-category table{
+    width:70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: antiquewhite;
+    font-size: large;    
+    font-weight: 500;
+
+}
+.mainsection .edit-category th,td{
+    padding: 7px;
+    text-align: center;
     border: 1px solid black;
 }
 
@@ -196,132 +344,142 @@ table,tr,th,td{
 
 
 
+/* Image Section */
 
 
-/* Manage Image  */
-
-
-/* .mainsection #submit-btn{
-padding: 15px 15px;
-width: 10%;
-background-color: green;
-border: none;
-color: white;
-} */
-
-
-
-
-
-
-/* SinghUP */
-
-
-.singup{
-    background-color: rgb(36, 9, 9);
-    width: 50%; 
-    height: inherit; 
+.mainsection .manageimage{
+    /* height: 100vh; */
+    width: 90%;
+    padding: 20px 30px;
+    margin: 30px auto;
+    background-color: rgb(240, 208, 121);
+    box-shadow: 0px 0 10px 2px rgb(19, 18, 18);
 }
 
-.singup,input{
-
-width: 40%;
-
-}
-
-
-
-
-
-
-
-
-
-
-/* Login form admin section  */
-
-body{
-    background-color: rgb(22, 16, 16);
-}
-.container-login{
-    margin: 100px 100px;
-}
-.logo{
-   padding-left: 100px;
-    font-family: sans-serif;
+.mainsection .manageimage .uplodesection input[type='file']{
+    display: block;
+    margin: 10px auto;
+    padding: 12px 10px;
     font-size: large;
 }
 
-.login-form{
-    margin-top: 50px;
-    margin-left: 5%;
-}
+.mainsection .manageimage .uplodesection button{
 
-p{
-    margin-bottom: 20px;
-    width: 50%;
-    height: 20px;
-    color: red;
-}
-
-
-
-.login-form,input{
-    width: 60%;
-    padding: 0px 5px;
+    display: block;
+    margin: 10px auto;
+    padding: 9px 17px;
+    font-size: medium;
+    background-color: green;
+    color: white;
     outline: none;
-    box-shadow: none;
-    box-sizing: border-box;
-    font-size: large;
+    border: none;
 }
 
-.container .input-element {
-    padding-top: 1%;
-    height: 500px;
-    width: 400px;
-    margin-left: 15%;
-    background-color: rgb(42, 39, 39);
+
+
+.mainsection .manageimage .imagesection .row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: max-content;
+
+}
+
+.mainsection .manageimage .imagesection .column {
+    width: 31.3%;
+    padding-bottom: 15px;
+}
+
+.mainsection .manageimage .imagesection .column label img {
+    width: 90%;
+}
+
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio]+label img {
+    width: 20%;
+    cursor: pointer;
+    margin: auto auto;
+    border: 2px solid black;
+
+}
+
+[type=radio]:checked+label img {
+    outline: 2px solid red;
+    border: 0px;
+}
+
+.mainsection .error #error{
+    margin: 20px auto ; 
+    padding: 10px 12px;
+    border: 1px solid red;
+    background-color: rgb(184, 57, 57);
     text-align: center;
-    border-radius: 7px;
+    color: white;
+    display: block;
+    width: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+/* manage admin */
+
+
+
+.mainsection .registeration{
+    width: 400px;
+    margin: 30px auto;
+    padding: 15px 12px;
+    background-color: #ffb;
+    box-shadow: 0px 0 10px 0 #000;
     
 }
-h3{
-    margin: 0;
-    padding: 0;
-}
-.login-form h3{
 
+
+.mainsection .registeration label{
     font-size: large;
+    display: block;
+    padding: 3px 15px;
+    margin: 2px auto;
+    width: 100%;
+
 }
 
-.form-btn{
-    margin: 10px 5%;
-}
-.submit-btn{
-    margin: 0 1%;
-    padding: 5px 5px;
-    border-radius: 7px;
-   background-color: rgb(21, 167, 21);
-    border: 1px solid rgb(0, 0, 0);
-   font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+.mainsection .registeration input{
+    display: block;
+    width: 100%;
+    padding: 12px 9px;
+    margin: 2px auto;
     outline: none;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-
+    font-weight: 500;
 }
+.mainsection .registeration input[class='submit-btn']{
 
-.reset-btn{
-    margin: 0 1%;
-    padding: 10px 20px;
-    border-radius: 7px;
-   background-color: rgb(187, 19, 19);
-    border: 1px solid rgb(0, 0, 0);
-   font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    margin: 7px auto;
+    padding: 9px 9px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: large;
     outline: none;
+    border: none;
     cursor: pointer;
-    color: rgb(255, 255, 255);
 
 }
 
+
+.mainsection .managepost table input[class='btn-del']{
+    background-color: green;    
+}
