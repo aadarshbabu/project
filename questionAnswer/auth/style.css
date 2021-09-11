@@ -1,0 +1,12 @@
+.costom{
+    width: 40%;
+    margin: 10px auto;
+}
+.textmsg > p{
+    font-size: x-small !important ; 
+    color: red !important;
+}
+.error{
+    border-color: red;
+    outline-color: red;
+}

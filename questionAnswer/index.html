@@ -1,0 +1,58 @@
+<script>
+    if (!sessionStorage.getItem("token")) {
+        window.location.href = "http://localhost:8080/questionAnswer/auth/login.html";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Dashboard</title>
+</head>
+
+<body>
+
+    <!-- main container... -->
+    <div class="container">
+        <div class="qna">
+            <h2>Submit Our Query</h2>
+            <form name="question" action="" method="post">
+                <textarea class="col-11" name="question" id="" cols="10" rows="5"></textarea>
+                <button type="submit">
+                    Submit Now
+                </button>
+            </form>
+        </div>
+
+
+        <!-- answer div -->
+
+        <div class="ans-div">
+            <h2>List Of answers</h2>
+            <div id="ans" class="answer">
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- jAVASCRIPT CODE -->
+        <script>
+            let obj = JSON.parse(localStorage.getItem('responce'));
+            document.querySelector("#s").innerHTML = obj.name;
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+            crossorigin="anonymous"></script>
+        <script src="./QNAcontrol.js"></script>
+</body>
+
+</html>

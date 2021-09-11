@@ -1,0 +1,10 @@
+#form {
+  margin: 20px auto;
+}
+
+#form label + input {
+  font-size: large;
+  margin: 20px auto;
+  padding: 10px auto;
+  display: inline-block;
+}

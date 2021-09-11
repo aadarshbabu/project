@@ -2,7 +2,7 @@
 $HOST="localhost";
 $DBNAME="blog";
 $USERNAME="root";
-$PASSWORD= "";
+  $PASSWORD= "";
 
 // define('HOST','localhost');
 // define('DBNAME','blog');
