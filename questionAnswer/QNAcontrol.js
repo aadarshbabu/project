@@ -1,5 +1,18 @@
-document.addEventListener('DOMContentLoaded', (event) => {
   
+  
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    
+    try {
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+        
+        myModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+        }) 
+    } catch (error) {
+        console.log(error)
+    }
   
     async function fetchqestion(){
         let res= await fetch("http://localhost:8080/questionAnswer/Backend/RESTAPI/fetchquestion.php");
@@ -9,58 +22,106 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
     }
     fetchqestion();
-    
+
+
     function setdom(questions){
         questions.map( (value)=>{
             let qes= `
           <div id="qid${value.id}"> 
             <p>
-            <a id="${value.id}" class="btn" data-bs-toggle="collapse" href="#collapseExample${value.id}"
+            <a id="${value.id}" class="btn btn-drop" data-bs-toggle="collapse" href="#collapseExample${value.id}"
                 role="button" aria-expanded="false" aria-controls="collapseExample">${value.questionTitle} +
             </a>
-            </p> 
+            </p>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="ans-btn" id="${value.id}"> Submit Your answer </button> 
             </div>`
             document.querySelector("#ans").insertAdjacentHTML('beforeend', qes);
         })
     }
 
-    var arr=[];
-    document.querySelector(".answer").addEventListener("click",(event)=>{
-        let id = event.target.id;
-       let v= arr.find(element => element == id)
-        if(!v)
-        {
-            console.log(id);
-            arr.push(id);
-            fetchans(id);
-        }   
+    //  User Click answer btn..
+
+    document.querySelector(".ans-div").addEventListener("click",(e)=>{
+       let  qid =e.target.id;
+        getanswer(qid);
 
     })
 
-    function error(bool){
-        let err= document.querySelector('.ans-div')
-        let errmsg= `<div id='error' class="alert alert-info" role="alert">
-            Data Not found
-        </div>`;
-        if(bool){   
-            err.insertAdjacentHTML('afterbegin',errmsg);
-        }else{
-        document.querySelector('#error').remove();
-        }
-   
+    function getanswer(qid){
+        answer={
+            questionid:qid
+        };
+       
+       const form = document.answer;
+      form.addEventListener("submit", function(e){
+            e.preventDefault();
+            var data = new FormData(this);
+            e.stopImmediatePropagation();
+            for (var key of data.keys()) {
+                answer[key] = data.get(key);
+            }
+            setanswer(answer);
+            this.childNodes[1].value="";
+        });
+     
     }
 
+   async function setanswer(answer){
+        try {
+            let res= await fetch("http://localhost:8080/questionAnswer/Backend/RESTAPI/setanswer.php",{
+                method:"post",
+                headers:{
+                   "Content-Type": "application/json",
+                },
+                body: JSON.stringify(answer)
+            });
+               if(res.status==200){
+                    let resmsg= await res.json();
+                    msg(true, resmsg.msg);
+                    console.log(resmsg);
+               }
+        } catch (error) {
+            console.error(error);
+        }   
+   
+        
+    }
+
+
+    var arr=[];
+    document.querySelector(".answer").addEventListener("click",(event)=>{
+        if(event.target.tagName.toLowerCase() === 'a'){
+            let id = event.target.id;
+            event.stopPropagation();
+            if(isNaN(id))
+            {
+                return false;
+            }
+            let v= arr.find(element => element == id)
+            if(!v)
+            {
+                arr.push(id);
+                fetchans(id);
+            } 
+        }
+     
+     
+    })
+
+  
     async function fetchans(id){
         const uri = `http://localhost:8080/questionAnswer/Backend/RESTAPI/fetchAnswer.php?q=${id}`;
           let res = await fetch(uri);
           if(res.status==200){
               let ans = await res.json();
             setans(ans);
-            error(false);
+            msg(false,"");
           }else{
-               error(true);
+               msg(true,"Data Not found");
           }
     }
+
+
     function setans(ans){
       
         ans.map((value)=>{
@@ -76,6 +137,59 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         });
     }
+
+    function msg(bool,msg){
+        let err1= document.querySelector('#error')
+        if(bool){  
+            err1.innerHTML=msg;
+            err1.style.display="block";
+            setTimeout(() => {
+                err1.style.display="none";
+            }, 3000);
+        }else{
+            // err1.style.display="none";
+        }
     
+    }
+    //  Submit question to database.//  Submit question to database.
+      function getquestion(){
+        let form=document.questionform;
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            let data= new FormData(this);
+            setdata(data);
+           this.childNodes[1].value="";
+        })
+     }
+     getquestion();
+    
+     async function setdata(data){
+         let localres = JSON.parse(localStorage.getItem("responce"));
+         let ques={
+            userid: localres.id
+         };
+         for (var key of data.keys()) {
+             ques[key] = data.get(key);
+         }
+         try {
+            let res = await fetch("http://localhost:8080/questionAnswer/Backend/RESTAPI/setquestion.php",{
+                method: "POST",
+                headers:{
+                 "Content-Type": "application/json",
+                },
+                body: JSON.stringify(ques)
+             });
+         
+             if(res.status==200){
+                 let msg = await res.json();
+                console.log(msg);
+                msg.code==200 ? msg(true, msg.msg): msg(true,"Something Went wrong");
+             }  
+         } catch (error) {
+             console.log(error);
+         }
+     }
+    
+
 
   })

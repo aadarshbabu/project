@@ -26,7 +26,7 @@
       if(resp.statusCode==200){
         sessionStorage.setItem("token", resp.token);
         localStorage.setItem("responce",JSON.stringify(resp));
-        window.location.replace("http://localhost:8080/questionAnswer/dashbord.html");
+        window.location.replace("http://localhost:8080/questionAnswer/index.html");
       }
     }).catch(error=> { 
       console.log(error);

@@ -16,7 +16,7 @@
     text-align: center;
     
 }
-.qna textarea{
+.qna textarea ,.modal-body textarea{
     display: block;
     margin: 20px auto;
     border-radius: 10px;
@@ -24,7 +24,7 @@
     outline: none;
     padding: 0 10px;
 }
- button{
+ form >.que-btn,.ans-btn{
     display: block;
     margin: 20px auto;
     border: none;
@@ -33,7 +33,7 @@
      color: white;
     background: linear-gradient(90deg, rgb(143, 22, 22),rgb(14, 51, 136));
 }
-.btn{
+.btn-drop{
     display: block;
     margin: 5px auto;
     border: none;
@@ -44,4 +44,11 @@
     outline: none;
     background-color: rgb(202, 206, 206);
     
+}
+.ans-btn{
+background:linear-gradient(rgb(82, 230, 82),green);
+}
+#error{
+    position:sticky;
+    top:10px;
 }
