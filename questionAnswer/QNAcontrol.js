@@ -25,15 +25,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
     function setdom(questions){
+            let {id} =JSON.parse(localStorage.getItem("responce"));
+
         questions.map( (value)=>{
+            let button="";
+            if(id!==value.userid){
+                button = `<button  type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="ans-btn" id="${value.id}"> Submit Your answer </button>`
+            }
             let qes= `
           <div id="qid${value.id}"> 
             <p>
             <a id="${value.id}" class="btn btn-drop" data-bs-toggle="collapse" href="#collapseExample${value.id}"
                 role="button" aria-expanded="false" aria-controls="collapseExample">${value.questionTitle} +
             </a>
+            ${button}
             </p>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="ans-btn" id="${value.id}"> Submit Your answer </button> 
+               
             </div>`
             document.querySelector("#ans").insertAdjacentHTML('beforeend', qes);
         })
